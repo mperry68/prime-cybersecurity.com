@@ -19,10 +19,13 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -235,6 +238,20 @@ body {
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .service-card h3 {
@@ -562,6 +579,164 @@ body {
     margin-top: 0;
 }
 
+/* Service Page Images */
+.service-image-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.service-feature-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    margin: 2rem 0;
+}
+
+/* ROI & Cost Savings Section */
+.roi-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.roi-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.roi-card {
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.roi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.roi-card.cost-prevention {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-top: 4px solid #4caf50;
+}
+
+.roi-card.cost-breach {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-top: 4px solid #f44336;
+}
+
+.roi-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.roi-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.roi-amount {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.roi-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.roi-benefits,
+.roi-costs {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.roi-benefits li,
+.roi-costs li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.roi-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.roi-costs li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #f44336;
+    font-weight: bold;
+}
+
+.roi-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.roi-benefit {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.roi-benefit h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.roi-benefit p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.roi-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.roi-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.roi-cta p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -611,6 +786,14 @@ body {
     }
 
     .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .roi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roi-section h2 {
         font-size: 2rem;
     }
 }
