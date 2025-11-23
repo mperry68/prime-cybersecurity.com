@@ -122,7 +122,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.85) 0%, rgba(0, 82, 163, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.75) 0%, rgba(0, 82, 163, 0.85) 100%);
 }
 
 .hero-content {
@@ -133,18 +133,33 @@ body {
     color: var(--white);
 }
 
+.hero-content .container {
+    position: relative;
+}
+
 .hero-content h1 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: var(--white);
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5), 0 6px 25px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     max-width: 700px;
-    opacity: 0.95;
+    line-height: 1.7;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
 }
 
 .hero-buttons {
@@ -594,6 +609,216 @@ body {
     margin: 2rem 0;
 }
 
+/* Security Audits Enhanced Styling */
+.section-intro-large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.audit-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 3rem 0;
+}
+
+.audit-category-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.audit-category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.audit-category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.audit-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.audit-category-header h3 {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.audit-description {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.audit-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.audit-detail-item {
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.audit-detail-item strong {
+    display: block;
+    font-size: 1.125rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.audit-detail-item p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.audit-deliverables {
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+}
+
+.audit-deliverables h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.deliverable-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.deliverable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.deliverable-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.deliverable-card h4 {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.deliverable-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.audit-process {
+    margin: 4rem 0;
+}
+
+.audit-process h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.process-step {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-step:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.step-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
 /* ROI & Cost Savings Section */
 .roi-section {
     padding: 5rem 0;
@@ -763,10 +988,14 @@ body {
 
     .hero-content h1 {
         font-size: 2rem;
+        -webkit-text-fill-color: var(--white);
+        background: none;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .hero-subtitle {
         font-size: 1rem;
+        padding: 1rem;
     }
 
     .services-overview h2,
@@ -795,6 +1024,32 @@ body {
 
     .roi-section h2 {
         font-size: 2rem;
+    }
+
+    .audit-category-card {
+        padding: 1.5rem;
+    }
+
+    .audit-category-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .deliverables-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-number {
+        margin: 0 auto;
+    }
+
+    .section-intro-large {
+        font-size: 1.125rem;
     }
 }
 
