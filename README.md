@@ -27,9 +27,11 @@ A professional cybersecurity services marketing website built for Cloudflare Pag
 ## Deployment to Cloudflare Pages
 
 1. Connect your repository to Cloudflare Pages
-2. Set the build output directory to the root directory (`.`)
+2. Set the build output directory to `public/` (this is where your HTML files and images are)
 3. No build command is needed (static site)
 4. The site will be automatically deployed on push to your main branch
+
+**Important:** Make sure your HTML files (index.html, etc.) are in the `public/` folder, or move them there. The build output directory should point to `public/` so that images in `public/images/` are accessible at `/images/`.
 
 ## Features
 

@@ -701,8 +701,11 @@ body {
     border-bottom: 2px solid var(--bg-light);
 }
 
-.audit-icon {
-    font-size: 2.5rem;
+.audit-icon,
+.testing-icon {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     width: 60px;
     height: 60px;
     display: flex;
@@ -711,6 +714,8 @@ body {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     border-radius: 12px;
     flex-shrink: 0;
+    color: var(--white);
+    text-transform: uppercase;
 }
 
 .audit-category-header h3 {
@@ -1111,6 +1116,94 @@ body {
     .btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* Benefits Section - Modern Design */
+.benefits-section {
+    margin: 4rem 0;
+}
+
+.benefits-section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.benefits-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card-modern {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary-color);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    transition: width 0.3s;
+}
+
+.benefit-card-modern:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-card-modern:hover::before {
+    width: 100%;
+    opacity: 0.05;
+}
+
+.benefit-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.benefit-card-modern h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-card-modern p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .benefits-section h2 {
+        font-size: 2rem;
+    }
+
+    .benefits-grid-modern {
+        grid-template-columns: 1fr;
     }
 }
 
